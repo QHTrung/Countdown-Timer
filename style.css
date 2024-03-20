@@ -10,7 +10,7 @@ body {
   background-image: url('./winter.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: center center;
   height: 100vh;
   font-family: 'Poppins', serif;
   display: flex;
@@ -25,24 +25,29 @@ body {
   margin-bottom: 40px;
 }
 .coundown-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  background-color: rgb(255 255 255 / 5%);
-  backdrop-filter: blur(10px);
-  padding: 20px 0;
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
 }
 .countdown-item {
   text-align: center;
+  background-color: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(10px);
+  padding: 20px;
 }
 .countdown-item h2 {
   font-weight: bold;
   font-size: 60px;
   line-height: 1;
 }
-@media screen and (max-width: 700px) {
+@media (max-width: 800px) {
+  .event-title {
+    margin-top: 20px;
+    font-size: 30px;
+  }
   .coundown-container {
-    flex-direction: column;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 }
